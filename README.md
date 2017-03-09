@@ -1,9 +1,9 @@
-# Stamplay Angular Seed Project
-A starter project for Stamplay apps built with AngularJS
+# Stamplay Angular Material Seed Project
+A starter project for Stamplay apps built with AngularJS and uses Material Design UI
 
 ### Setup Instructions
 
-- Clone project : `git clone https://github.com/Stamplay/stamplay-angular-seed.git`
+- Clone project : `git clone https://github.com/bencochrane1/stamplay-angular-material-seed`
 
 - NOTE! : If you want to use version 1.x of the Stamplay JavaScript SDK, checkout the branch after cloning with the following command:
 	`git checkout v1-sdk`
@@ -12,7 +12,7 @@ A starter project for Stamplay apps built with AngularJS
 
 - Configure Stamplay Project : Input your `APP ID` and `API KEY` from your Stamplay app dashboard in the corresponding properties in the `stamplay.json` file in the root of the seed project.
 
-- Create a new **Object** schema on Stamplay, named "**note**", with a **body** property as a *string*.
+- Create a new **Object** schema on Stamplay, named "**note**", with a properties of **title**, **image** and **link** all as a *string*.
 
 
 ### Running locally for development
