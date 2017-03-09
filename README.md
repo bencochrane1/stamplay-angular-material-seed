@@ -29,4 +29,4 @@ A starter project for Stamplay apps built with AngularJS and uses Material Desig
 
 
 #### Preview
-<img src="https://cloud.githubusercontent.com/assets/7504299/12131415/3dddfb72-b3c7-11e5-97a0-f32766b8dc99.png" style="border:2px solid #eee;"/>
+<img src="https://preview.ibb.co/e3KnVa/screencapture_localhost_8080_1489051232103.png" style="border:2px solid #eee;"/>
