@@ -27,7 +27,7 @@ angular.module("app", [
 }])
 .run(["$rootScope", function($rootScope) {
 
-  Stamplay.init("become");
+  Stamplay.init("YOUR_APP_ID");
 
   Stamplay.User.currentUser()
     .then(function(res) {
