@@ -1,5 +1,5 @@
 # Stamplay Angular Material Seed Project
-A starter project for Stamplay apps built with AngularJS and uses Material Design UI
+A starter project for Stamplay apps built with AngularJS and uses Material Design UI https://material.angularjs.org/latest/
 
 ### Setup Instructions
 
