@@ -1,0 +1,109 @@
+<div class="padding-inner">
+
+  <div layout="row" layout-wrap layout-align="start center">
+    <div flex="33" flex-sm="50" flex-xs="100">
+      <md-card class="_md">
+              <img style="padding: 20px;" src="https://stamplay.com/images/full-logo-no-neck.png" class="md-card-image" alt="">       
+              <md-card-title layout-align="space-between-center" layout-wrap="" class="layout-wrap layout-align-space-between-center">
+                <md-card-title-text>
+                  <span class="md-headline">Stamplay Angular Material Design Seed</span>
+                </md-card-title-text>
+              </md-card-title>
+              <md-card-content>
+                <p>To begin create an Object called <code>'note'</code></p>
+                <p>Create attributes on note of: <code>'link'</code> type String, <code>'image'</code> type String and <code>'title'</code> type String</p>
+                <p>To run: <code>gulp dev</code></p>
+                <p>New tab: <code>stamplay start</code></p>
+              </md-card-content>
+      </md-card>
+    </div>
+  </div>
+
+  <div layout="row" layout-wrap layout-align="start center">
+    <div flex="33" flex-sm="50" flex-xs="100">
+      <md-card class="_md">
+            <img style="padding: 20px;" ng-src="https://stamplay.com/images/full-logo-no-neck.png" class="md-card-image" alt="" src="https://stamplay.com/images/full-logo-no-neck.png">       
+
+            <md-card-title layout="row" layout-align="space-between-center" layout-wrap="" class="layout-wrap layout-align-space-between-center layout-row">
+            
+              <md-input-container style="width: 100%;" class="">
+                <label for="input_0">Enter Title</label>
+                <input ng-model="vm.new.title" class="ng-pristine ng-untouched ng-valid md-input ng-empty" id="input_0" aria-invalid="false"><div class="md-errors-spacer"></div>
+              </md-input-container>         
+
+              <md-input-container style="width: 100%;" class="md-input-has-value">
+                <label for="input_1">Enter Image URL</label>
+                <input ng-model="vm.new.image" class="ng-pristine ng-untouched ng-valid md-input ng-not-empty" id="input_1" aria-invalid="false"><div class="md-errors-spacer"></div>
+              </md-input-container>   
+
+              <md-input-container style="width: 100%;" class="">
+                <label for="input_2">Enter Link URL</label>
+                <input ng-model="vm.new.link" class="ng-pristine ng-untouched ng-valid md-input ng-empty" id="input_2" aria-invalid="false"><div class="md-errors-spacer"></div>
+              </md-input-container>             
+
+              <button class="md-raised md-primary md-button md-ink-ripple" type="button" ng-click="vm.createNote()">Create New Card</button>
+              
+            </md-card-title>
+          </md-card>
+    </div>
+  </div>
+
+  <div layout="row" layout-wrap layout-align="start center">
+    <div flex="33" flex-sm="50" flex-xs="100" ng-repeat="note in vm.notes">
+
+
+      <md-card ng-if="!note.editing" class="_md">
+        <div style="height: 160px; overflow: hidden;">
+          <img style="object-fit: cover; width: 100%;" ng-src="{{ note.image }}">
+        </div>
+        <md-card-title layout="row" layout-align="space-between-center" layout-wrap="" class="layout-wrap layout-align-space-between-center layout-row">
+          <md-card-title-text>
+            <span class="md-title ng-binding">{{ note.title }}</span>
+          </md-card-title-text>
+
+          <button class="md-icon-button md-button md-ink-ripple" type="button" ng-click="note.editing = !note.editing" aria-label="Close User Menu">
+            <md-icon md-font-icon="fa-pencil-square-o" class="md-menu-text-color fa s24 md-font material-icons fa-pencil-square-o" aria-hidden="true"></md-icon>         
+          </button>          
+
+          <a class="md-icon-button md-button md-ink-ripple" target="_blank" href="{{ note.link }}" aria-label="Close User Menu">
+            <md-icon md-font-icon="fa-external-link" class="md-menu-text-color fa s24 md-font material-icons fa-external-link" aria-hidden="true"></md-icon>         
+          </a>
+
+          <button class="md-icon-button md-button md-ink-ripple" type="button" ng-click="vm.deleteNote(note, $index)" aria-label="Delete Card">
+            <md-icon md-font-icon="fa-trash-o" class="md-menu-text-color fa s24 md-font material-icons fa-trash-o" aria-hidden="true"></md-icon>            
+          </button>
+
+        </md-card-title>
+      </md-card>
+
+
+      <md-card ng-if="note.editing" class="ng-scope _md">
+        <img style="padding: 20px;" ng-src="{{ note.image }}">       
+
+        <md-card-title layout="row" layout-align="space-between-center" layout-wrap="" class="layout-wrap layout-align-space-between-center layout-row">
+        
+          <md-input-container style="width: 100%;" class="md-input-has-value">
+            <label for="input_3">Enter Title</label>
+            <input ng-model="note.title" class="ng-pristine ng-untouched ng-valid md-input ng-not-empty" id="input_3" aria-invalid="false"><div class="md-errors-spacer"></div>
+          </md-input-container>         
+
+          <md-input-container style="width: 100%;" class="md-input-has-value">
+            <label for="input_4">Enter Image URL</label>
+            <input ng-model="note.image" class="ng-pristine ng-untouched ng-valid md-input ng-not-empty" id="input_4" aria-invalid="false"><div class="md-errors-spacer"></div>
+          </md-input-container>   
+
+          <md-input-container style="width: 100%;" class="md-input-has-value">
+            <label for="input_5">Enter Link URL</label>
+            <input ng-model="note.link" class="ng-pristine ng-untouched ng-valid md-input ng-not-empty" id="input_5" aria-invalid="false"><div class="md-errors-spacer"></div>
+          </md-input-container>             
+
+
+          <button class="md-raised md-primary md-button md-ink-ripple" type="button" ng-click="vm.saveNote(note)">Save Changes</button>
+          
+        </md-card-title>
+      </md-card>      
+
+    </div>
+  </div>
+
+</div>

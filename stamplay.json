@@ -1,0 +1,10 @@
+{
+  "appId": "become",
+  "apiKey": "60aaa18b9a6f01c529694e5a044180ff941ad047f8a76ef58634016c5b939ae9",
+  "public": "build",
+  "ignore": [
+    "stamplay.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

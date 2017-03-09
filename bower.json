@@ -1,0 +1,21 @@
+{
+  "name": "stamplay-angular-seed",
+  "description": "",
+  "main": "index.js",
+  "authors": [],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "install": {
+    "path": "build/vendor"
+  },
+  "dependencies": {
+    "stamplay-js-sdk": "~2.0.5",
+    "angular-stamplay": "0.0.2"
+  }
+}
