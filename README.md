@@ -10,7 +10,7 @@ A starter project for Stamplay apps built with AngularJS and uses Material Desig
 
 - Install the project dependencies : `npm install` & `bower install`
 
-- Configure Stamplay Project : Input your `APP ID` and `API KEY` from your Stamplay app dashboard in the corresponding properties in the `stamplay.json` file in the root of the seed project.
+- Configure Stamplay Project : Input your `APP ID` and `API KEY` from your Stamplay app dashboard in the corresponding properties in the `stamplay.json` file in the root of the seed project. Then in  the `app.module.js` file inside of the javascript folder, add in your `APP ID` into `Stamplay.init('APP_ID')`
 
 - Create a new **Object** schema on Stamplay, named "**note**", with a properties of **title**, **image** and **link** all as a *string*.
 
