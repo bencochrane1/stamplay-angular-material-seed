@@ -1,0 +1,11 @@
+<md-content>
+  <md-tabs md-dynamic-height md-border-bottom>
+    <md-tab ng-repeat="question in vm.allQuestions" label="{{ question.shorttitle }}">
+      <md-content class="md-padding padding-inner">
+        <h3 class="md-headline">{{ question.title }}</h3>
+        <p ng-repeat="option in question.multichoiceoptions">{{ option }}</p>
+        <md-button class="md-raised md-primary">Next</md-button>
+      </md-content>
+    </md-tab>
+  </md-tabs>
+</md-content>

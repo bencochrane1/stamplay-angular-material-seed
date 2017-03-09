@@ -5,8 +5,26 @@ angular.module("app").factory("NoteFactory", ["$stamplay", "$q", function($stamp
     getNotes: getNotes,
     updateNote: updateNote,
     createNote: createNote,
-    deleteNote: deleteNote
+    deleteNote: deleteNote,
+    allQuestions: allQuestions
   }
+
+
+  function allQuestions() {
+    var deferred = $q.defer();
+
+    $stamplay.Object('question').get()
+    .then(function(res) {
+      // console.log('all questions', res);
+      deferred.resolve(res.data);
+    })
+    .catch(function(err) {
+      deferred.reject(res);
+    });
+
+    return deferred.promise;
+  }
+
 
   function getNotes() {
     var q = $q.defer();
